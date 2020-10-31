@@ -279,7 +279,7 @@ function AudioSynthView() {
 		var notes = __audioSynth._notes;
 
 		for(var i=-1;i<=2;i++) {
-			console.log(i);
+			
 			for(var n in notes) {
 				if(n[2]!='b') {
 					var thisKey = document.createElement('div');
@@ -297,7 +297,6 @@ function AudioSynthView() {
 					}
 					var label = document.createElement('div');
 					label.className = 'label';
-					console.log(getKeytext(reverseLookupText[n + ',' + i]));
 					label.innerHTML = '<b>' + getKeytext(reverseLookupText[n + ',' + i]) + '</b>' + '<br /><br />' + n.substr(0,1) +
 						'<span name="OCTAVE_LABEL" value="' + i + '">' + (__octave + parseInt(i)) + '</span>' + (n.substr(1,1)?n.substr(1,1):'');
 					thisKey.appendChild(label);
